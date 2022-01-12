@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@100;400;700&display=swap');
+body {
+  background-attachment: fixed;
+  background-position: center;
+  animation-name: body-bcg;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes body-bcg {
+  0%{
+    background-image: url('assets/img/bcg/bcg1.png');
+  }
+  50%{
+    background-image: url('assets/img/bcg/bcg1.png');
+  }
+  75%{
+    background-image: url('assets/img/bcg/bcg2.png');
+  }
+  100%{
+    background-image: url('assets/img/bcg/bcg2.png');
+  }
+}
+
+a {
+  text-decoration: none;
+  color: aqua;
+}
+.info{
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: Poppins, sans-serif;
+  color: white;
+  margin-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  background: rgba(23, 23, 23, 0.65);
+  height: 70%;
+}
+
+@media only screen and (max-width: 865px) {
+  .info {
+    margin-top: 10px;
+    margin-bottom: 100px;
+  }
+}
