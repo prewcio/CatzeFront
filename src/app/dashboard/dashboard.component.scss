@@ -19,9 +19,18 @@ p {
   font-size: 19px;
 }
 .info-item{
-  border: rgba(73,73,73,0.75) 1px solid;
+  //border: rgba(187, 187, 187, 0.42) 1px solid;
+  text-shadow: rgba(0,0,0,0.62) 0px 0px 8px;
+  padding: 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
   border-right: none;
   border-left: none;
+  border-radius: 10px;
+  background: rgba(187, 187, 187, 0.05);
+  margin-bottom: 5px;
 }
 .info-item:last-of-type{
   border-bottom: none;
@@ -35,5 +44,9 @@ p {
     align-items: center;
     text-align: center;
     width: 80%;
+  }
+  .info-item{
+    //border: rgba(187, 187, 187, 0.42) 1px solid;
+
   }
 }

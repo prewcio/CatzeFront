@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "catze-5ea3b"
+  },
+  "targets": {
+    "catze-5ea3b": {
+      "hosting": {
+        "catze2": [
+          "catze-5ea3b"
+        ]
+      }
+    }
+  }
+}

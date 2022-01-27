@@ -1,17 +1,41 @@
 import { Component } from '@angular/core';
-import {faBookOpen, faHome, faMap,faChartBar} from "@fortawesome/free-solid-svg-icons";
-import {faDiscord} from "@fortawesome/free-brands-svg-icons";
+import {
+  Router,
+  Event as RouterEvent,
+  NavigationStart,
+  NavigationEnd,
+  NavigationCancel,
+  NavigationError
+} from '@angular/router'
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'catze';
-  faHome = faHome;
-  faBookOpen = faBookOpen;
-  faMap = faMap;
-  faDiscord = faDiscord;
-  faChartBar = faChartBar;
+  public showOverlay = true;
+  constructor(private router: Router){
+    router.events.subscribe((event: RouterEvent) => {
+      this.navigationInterceptor(event)
+    })
+  }
+  navigationInterceptor(event: RouterEvent): void {
+    if (event instanceof NavigationStart) {
+      this.showOverlay = true;
+    }
+    if (event instanceof NavigationEnd) {
+      // this.showOverlay = false;
+    }
+
+    // Set loading state to false in both of the below events to hide the spinner in case a request fails
+    if (event instanceof NavigationCancel) {
+      // this.showOverlay = false;
+    }
+    if (event instanceof NavigationError) {
+      // this.showOverlay = false;
+    }
+  }
 }

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api_url: 'http://api.catze.pl/api'
+  api_url: 'https://api.catze.pl'
 };
